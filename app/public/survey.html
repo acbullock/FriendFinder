@@ -49,7 +49,7 @@
     				<div class="form-group">
     					<label>Generally speaking, you rely more on your experience than your imagination.</label>
                 		<select id="q2" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -62,7 +62,7 @@
     				<div class="form-group">
     					<label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
                 		<select id="q3" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -75,7 +75,7 @@
     				<div class="form-group">
     					<label>You rarely do something just out of sheer curiosity.</label>
                 		<select id="q4" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -88,7 +88,7 @@
     				<div class="form-group">
     					<label>People can rarely upset you.</label>
                 		<select id="q5" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -101,7 +101,7 @@
     				<div class="form-group">
     					<label>It is often difficult for you to relate to other people’s feelings.</label>
                 		<select id="q6" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -114,7 +114,7 @@
     				<div class="form-group">
     					<label>In a discussion, truth should be more important than people’s sensitivities.</label>
                 		<select id="q7" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -127,7 +127,7 @@
     				<div class="form-group">
     					<label>You rarely get carried away by fantasies and ideas.</label>
                 		<select id="q8" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -140,7 +140,7 @@
     				<div class="form-group">
     					<label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                 		<select id="q9" class="custom-select form-control">
-  							<option selected>Select..</option>
+  							<option selected value="0">Select..</option>
 							<option value="1">1 (strongly disagree)</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -153,7 +153,7 @@
     				<div class="form-group">
     					<label>You feel more energetic after spending time with a group of people.</label>
                 		<select id="q10" class="custom-select form-control">
-                            <option selected>Select..</option>
+                            <option selected value="0">Select..</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -210,15 +210,20 @@ $("#submit").on("click", function(event){
     function validateForm() {
       var isValid = true;
       $("input").each(function() {
-        if ( $(this).val() === '' ){
+        // console.log($(this).val());
+        if ( $(this).val() === ''){
+            alert('asfd');
            isValid = false;
             
+        }
+        else{
+            alert($(this).val());
         }
       });
 
       $("select").each(function() {
 
-        if( $(this).val() === ""){
+        if(  $(this).val() == '0'){
             
             isValid = false
         }
@@ -229,7 +234,6 @@ $("#submit").on("click", function(event){
     // If all required fields are filled
     if (validateForm() == true)
     {
-        alert("hey");
         // Create an object for the user's data
         var userData = {
             name: $("#name").val(),
@@ -243,7 +247,7 @@ $("#submit").on("click", function(event){
 
         // AJAX post the data to the friends API. 
         $.post(currentURL + "/api/friends", userData, function(data){
-            console.log(data);
+            //console.log(data);
             $("input").val("");
             $("select").val("");
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
