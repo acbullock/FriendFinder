@@ -223,7 +223,7 @@ $("#submit").on("click", function(event){
 
       $("select").each(function() {
 
-        if(  $(this).val() == '0'){
+        if(  $(this).val() == '0' || $(this).val()=''){
             
             isValid = false
         }
