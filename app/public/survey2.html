@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+          
+
+    
+	<title>FriendFinder</title>
+</head>
+<body>
+	<div class="container">
+		
+	   <h3>Survey Questions</h3>
+    	
+		<hr>
+    	
+    		
+    	<h4>About You</h4>
+    			
+    		
+    	
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label >Name (required)</label>
+            </div> 
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="photo" type="text" class="validate">
+              <label>Link to Photo Image (Required)</label>
+            </div>
+            
+          </div>
+          
+      
+        </form>
+
+    	<hr>
+        <h4>Question 1</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+                <select id="q1">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 2</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+                <select id="q2">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 3</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+                <select id="q3">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 4</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>You rarely do something just out of sheer curiosity.</h5>
+                <select id="q4">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 5</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>People can rarely upset you.</h5>
+                <select id="q5">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 6</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+                <select id="q6">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 7</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+                <select id="q7">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 8</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>You rarely get carried away by fantasies and ideas.</h5>
+                <select id="q8">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 9</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+                <select id="q9">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <h4>Question 10</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <h5>You feel more energetic after spending time with a group of people.</h5>
+                <select id="q10">
+                  <option value="0" disabled selected>Choose your option</option>
+                  <option value="1">1 (strongly disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (strongly agree)</option>
+                </select>
+            
+            </div>
+        </div>
+        <br/>
+        
+        <a class="waves-effect waves-light btn" id="submit" role="button">Submit</a>
+         <br/>
+
+
+	</div>
+	<!-- Modal Structure -->
+  <div id="resultsModal" class="modal">
+    <div class="modal-content">
+      <h4>Best Match</h4>
+      <p id="matchName"></p>
+      <img id="matchImg" src="" alt="">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+
+	<footer class="page-footer">
+      <div class="container">
+        <span >
+        	<a class="white-text" href="api/friends">API Friends List</a> | 
+        	<a class="white-text" href="http://github.com/acbullock/FriendFinder" target="_blank">GitHub Repo</a> 
+        </span>
+      </div>
+    </footer>
+    <br/>
+    
+</body>
+<script type="text/javascript">
+     $(document).ready(function() {
+    $('select').material_select();
+    $('.modal').modal();
+  });
+// Capture the form inputs 
+$("#submit").on("click", function(event){
+    event.preventDefault();
+
+    // Form validation
+    function validateForm() {
+      var isValid = true;
+      $("input").each(function() {
+        // console.log($(this).val());
+        if ( $(this).val() === '' || $(this).val() == 'Choose your option'){
+            alert('asfd');
+           isValid = false;
+            
+        }
+      });
+
+      $("select").each(function() {
+
+        if(  $(this).val() == 'Choose your option' || $(this).val()==''){
+            
+            isValid = false
+        }
+      })
+      return isValid;
+    }
+
+    // If all required fields are filled
+    if (validateForm() == true)
+    {
+        // Create an object for the user's data
+        var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        }
+        //console.log(userData);
+
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+
+        // AJAX post the data to the friends API. 
+        $.post(currentURL + "/api/friends", userData, function(data){
+            //console.log(data);
+            $("input").val("");
+            $("select").val("");
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#matchName").text(data.name);
+            $('#matchImg').attr("src", data.photo);
+
+            // Show the modal with the best match 
+            $("#resultsModal").modal('open');
+
+        });
+
+    }
+
+    else
+    {
+        alert("Please fill out all fields before submitting!");
+    }
+    
+    return false;
+});
+</script>
+</html>
