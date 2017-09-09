@@ -21,13 +21,7 @@ function findMatchFunction(newFriend){
   var matchIndex = -1;
   var minDiff = 10000000;
 
-  // $.each(friendsData, function(index, value){
-  //   var curDiff = calcTotalDifference(friendsData[index].scores, newFriend.scores);
-  //   if (minDiff > curDiff){
-  //     minDiff = curDiff;
-  //     matchIndex = index;
-  //   }
-  // });
+  
   for(var i = 0; i < friendsData.length; i++){
     var curDiff = calcTotalDifference(friendsData[i].scores, newFriend.scores);
     if (minDiff > curDiff){
@@ -67,7 +61,7 @@ module.exports = function(app) {
   app.post("/api/friends", function(req, res) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
-      console.log(req.body);
+      // console.log(req.body);
       //find match, then
       
       //res.json(friendsDat)
@@ -78,9 +72,6 @@ module.exports = function(app) {
     
   });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
 
  
 };

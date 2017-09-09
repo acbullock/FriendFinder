@@ -2,9 +2,14 @@ var friendsArray = [
   {
     name: "Charlamagne tha God",
     photo: "http://loudspeakersnetwork.com/wp-content/uploads/2014/05/Charlamagne-Tha-God400.png",
-    scores:["4","3","5","5","4","5","1","2","2","1"]
+    scores:["5","5","5","5","5","5","5","5","5","5"]
+  },
+  {
+    name: "Angela Yee",
+    photo: "https://i2.wp.com/allhiphop.com/wp-content/uploads/2017/03/Angela-YeeWENN.jpg?fit=400%2C300&ssl=1",
+    scores:["4","4","4","4","4","4","4","4","4","4"]
   }
 ];
 
-// Note how we export the array. This makes it accessible to other files using require.
+//Export the array.
 module.exports = friendsArray;
